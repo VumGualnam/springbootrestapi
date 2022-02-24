@@ -1,15 +1,15 @@
 package com.spring.tutorial.springrestapi.controller;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+//@Controller
+@RestController // @Controller + @ResponseBody
 public class EmployeeController {
 	
-	@RequestMapping(value = "/employees", method = RequestMethod.GET)
-	@ResponseBody
+//	@RequestMapping(value = "/employees", method = RequestMethod.GET)
+//	@ResponseBody
+	@GetMapping("/employees")
 	public String getEmployees() {
 		return "displaying the list of employees";
 	}
